@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg_image"></div>
+
+    <h1>Azlan Budget App</h1>
+    <div class="container">
+      <!-- Monthly Budget Portion -->
+      <div class="monthly_budget">
+        <h2>Monthly Budget</h2>
+        <div>
+          <input type="number" id="budget" placeholder="Enter Amount in Rs" />
+        </div>
+        <div>
+          <button id="set_budget" class="submit">Set Budget</button>
+        </div>
+      </div>
+
+      <!-- Add Expenses Portion -->
+      <div class="add_expense">
+        <div>
+          <label class="required">Due Date</label><br />
+          <input type="date" id="due_date" />
+        </div>
+        <div>
+          <label class="required">Total Amount</label><br />
+          <input type="number" id="amount" />
+        </div>
+        <div>
+          <label class="required">Category</label>
+          <select id="expense_type">
+            <option>Groceries Expense</option>
+            <option>Electricity and Internet Bills</option>
+            <option>Cloths and Shopping</option>
+            <option>Restaurant and Cafe</option>
+            <option>Fuel Expenses</option>
+          </select>
+        </div>
+        <div>
+          <label>Description</label>
+          <input type="text" id="desc" />
+        </div>
+        <div>
+          <label class="required">Payment Date</label><br />
+          <input type="date" id="pay_date" />
+        </div>
+        <div class="btn">
+          <button class="submit" id="add_expense_btn">Add Expense</button>
+        </div>
+      </div>
+
+      <!-- Expense List Portion -->
+      <div class="list">
+        <div>
+          <p>Total Budget</p>
+          <span id="total_budget">0</span>
+        </div>
+
+        <div>
+          <p>Expenses</p>
+          <span id="total_expenses">0</span>
+        </div>
+
+        <div>
+          <p>Balance</p>
+          <span id="balance">0</span>
+        </div>
+      </div>
+
+      <div class="expense_list">
+        <h2>Expense List</h2><br>
+        <div class="list_container" id="listt"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
